@@ -154,7 +154,7 @@ public class TelaPerguntas extends javax.swing.JFrame {
 
     private void JButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton1ActionPerformed
         this.setVisible(false);
-        TelaPerguntas1 tp1 = new TelaPerguntas();
+        TelaPerguntas tp1 = new TelaPerguntas();
         tp1.setVisible(true);
         tp1.setLocationRelativeTo(null);
     }//GEN-LAST:event_JButton1ActionPerformed
