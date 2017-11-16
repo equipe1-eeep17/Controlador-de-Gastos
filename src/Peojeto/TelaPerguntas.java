@@ -33,14 +33,16 @@ public class TelaPerguntas extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        labelPergunta = new javax.swing.JLabel();
         JTextField1 = new javax.swing.JTextField();
-        JButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        labelPergunta1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        JButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        labelPergunta = new javax.swing.JLabel();
 
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -49,20 +51,40 @@ public class TelaPerguntas extends javax.swing.JFrame {
             }
         });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-
-        labelPergunta.setText("jLabel1");
-        getContentPane().add(labelPergunta);
-        labelPergunta.setBounds(72, 45, 34, 14);
-
         JTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(JTextField1);
-        JTextField1.setBounds(80, 260, 340, 20);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ana fabia\\Downloads\\boneco-lupa.gif")); // NOI18N
+
+        jLabel2.setText("jLabel2");
+
+        labelPergunta1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelPergunta1.setForeground(new java.awt.Color(255, 255, 255));
+        labelPergunta1.setText("Quanto de água foi gasto esse mês?");
+        labelPergunta1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                labelPergunta1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         JButton1.setText("Próximo");
         JButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -70,52 +92,88 @@ public class TelaPerguntas extends javax.swing.JFrame {
                 JButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(JButton1);
-        JButton1.setBounds(410, 300, 71, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ana fabia\\Desktop\\desenhos-para-colorir-desenhos-para-co-2.jpg")); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 500, 350);
+        jButton2.setText("Tela Inicial");
 
-        jMenu1.setText("Voltar");
-
-        jMenuItem1.setText("jMenuItem1");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+        labelPergunta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelPergunta.setForeground(new java.awt.Color(255, 255, 255));
+        labelPergunta.setText("Quanto de água foi gasto esse mês?");
+        labelPergunta.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                labelPerguntaAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        jMenu1.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JButton1)
+                .addGap(62, 62, 62))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(labelPergunta))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(163, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(labelPergunta)
+                .addGap(120, 120, 120)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 500, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void JTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextField1ActionPerformed
-        this.dispose();
-        TelaPerguntas tp = new TelaPerguntas("Quanto de energia foi gasto esse mês?");
-        tp.setVisible(true);
+     
     }//GEN-LAST:event_JTextField1ActionPerformed
 
     private void JButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton1ActionPerformed
-        this.dispose();
-        TelaPerguntas tp = new TelaPerguntas("Quanto de energia foi gasto esse mês?");
-        tp.setVisible(true);
+        this.setVisible(false);
+        TelaPerguntas1 tp1 = new TelaPerguntas();
+        tp1.setVisible(true);
+        tp1.setLocationRelativeTo(null);
     }//GEN-LAST:event_JButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible ()
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void labelPerguntaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_labelPerguntaAncestorAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_labelPerguntaAncestorAdded
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+       
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void labelPergunta1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_labelPergunta1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_labelPergunta1AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -157,11 +215,13 @@ public class TelaPerguntas extends javax.swing.JFrame {
     private javax.swing.JButton JButton1;
     private javax.swing.JTextField JTextField1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelPergunta;
+    private javax.swing.JLabel labelPergunta1;
     // End of variables declaration//GEN-END:variables
 }

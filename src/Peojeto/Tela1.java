@@ -122,8 +122,7 @@ public class Tela1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void botaoVCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVCActionPerformed
-        TelaPerguntas tp = new TelaPerguntas("Quanto de água foi gasto esse mês?");
-        tp.setVisible(true);
+       
     }//GEN-LAST:event_botaoVCActionPerformed
 
     /**
